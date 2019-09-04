@@ -73,6 +73,12 @@
 
 /* Device virtual file system */
 
+#define RT_USING_DFS
+#define DFS_USING_WORKDIR
+#define DFS_FILESYSTEMS_MAX 2
+#define DFS_FILESYSTEM_TYPES_MAX 2
+#define DFS_FD_MAX 16
+#define RT_USING_DFS_DEVFS
 
 /* Device Drivers */
 
@@ -83,14 +89,21 @@
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
 
-/* Using Hardware Crypto drivers */
-
-
-/* Using WiFi */
-
-
 /* Using USB */
 
+#define RT_USING_USB_DEVICE
+#define RT_USBD_THREAD_STACK_SZ 4096
+#define USB_VENDOR_ID 0x0FFE
+#define USB_PRODUCT_ID 0x0001
+#define RT_USB_DEVICE_COMPOSITE
+#define RT_USB_DEVICE_CDC
+#define RT_USB_DEVICE_NONE
+#define RT_USB_DEVICE_MSTORAGE
+#define RT_VCOM_TASK_STK_SIZE 512
+#define RT_VCOM_SERNO "32021919830108"
+#define RT_VCOM_SER_LEN 14
+#define RT_VCOM_TX_TIMEOUT 1000
+#define RT_USB_MSTORAGE_DISK_NAME "flash0"
 
 /* POSIX layer and C standard library */
 
@@ -104,9 +117,6 @@
 
 
 /* light weight TCP/IP stack */
-
-
-/* Modbus master and slave stack */
 
 
 /* AT commands */
